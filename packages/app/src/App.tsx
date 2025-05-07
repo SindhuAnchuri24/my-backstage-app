@@ -66,7 +66,17 @@ const app = createApp({
   apis,
   plugins: [badgesPlugin],
   components: {
-    SignInPage: props => <ProxiedSignInPage {...props} provider="guest" />,
+    SignInPage: props => (<SignInPage
+      {...props}
+      auto
+      provider={{
+        id: 'github-auth-provider',
+        title: 'GitHub',
+        message: 'Sign in using GitHub',
+        apiRef: githubAuthApiRef,
+      }} 
+    />,
+    ),
   },
   bindRoutes({ bind }) {
     bind(catalogPlugin.externalRoutes, {
@@ -195,3 +205,4 @@ export default app.createRoot(
     </AppRouter>
   </>,
 );
+import { githubAuthApiRef } from '@backstage/core-plugin-api';
