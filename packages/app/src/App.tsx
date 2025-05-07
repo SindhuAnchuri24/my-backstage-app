@@ -1,4 +1,6 @@
 import { badgesPlugin } from './plugins';
+import { githubAuthApiRef } from '@backstage/core-plugin-api';
+import { SignInPage } from '@backstage/core-components';
 
 import {
   AlertDisplay,
