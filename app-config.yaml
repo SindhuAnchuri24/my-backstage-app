@@ -7,7 +7,7 @@ auth:
     github:
       development:
         clientId: Ov23liC3SygIxxGY2VMa
-        clientSecret: 0b502f3b66562cb3fa5aebda529f6a2168db958c
+        clientSecret: 9da242b288f49e7bb440f554cf11f5c38c89f8b1
   signIn:
           resolvers:
             # Matches the GitHub username with the Backstage user entity name.
